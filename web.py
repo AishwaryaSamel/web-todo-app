@@ -16,10 +16,11 @@ def add_todo():
     todos.append(todo)
     functions.write_todos(todos)
 
+st.set_page_config(layout="wide")
 
 st.title("My ToDo App")
 st.subheader("This is my todo app")
-st.write("This app is designed to increase one's productivity.")
+st.write("<i>This app is designed to increase one's productivity.</i>",unsafe_allow_html=True)
 
 for index,todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
